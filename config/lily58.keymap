@@ -54,11 +54,11 @@
             //                     | ALT  | GUI  | LOWER|  SPACE |  | ENTER | RAISE| BSPC  | GUI   |
 
             bindings = <
-&kp ESC    &kp N1  &kp N2  &kp N3  &kp N4            &kp N5                                                                &kp N6                &kp N7      &kp N8     &kp N9   &kp N0    &kp BACKSPACE
-&kp TAB    &kp Q   &kp W   &kp E   &kp R             &kp T                                                                 &kp Y                 &kp U       &kp I      &kp O    &kp P     &kp MINUS
-&kp MINUS  &kp A   &kp S   &kp D   &kp F             &kp G                                                                 &kp H                 &kp J       &kp K      &kp L    &kp SEMI  &kp SQT
-&kp EQUAL  &kp Z   &kp X   &kp C   &kp V             &kp B                     &lt 1 BACKSPACE        &kp RBKT             &kp N                 &kp M       &kp COMMA  &kp DOT  &kp FSLH  &kp RSHFT
-                           &tousa  &kp LEFT_CONTROL  &mt LS(LEFT_SHIFT) SPACE  &mt LEFT_ALT RETURN    &mt RIGHT_ALT ENTER  &mt LEFT_SHIFT SPACE  &lt 2 LCMD  &tousa
+&kp ESC    &kp N1  &kp N2  &kp N3  &kp N4            &kp N5                                                        &kp N6                &kp N7      &kp N8     &kp N9   &kp N0    &kp BACKSPACE
+&kp TAB    &kp Q   &kp W   &kp E   &kp R             &kp T                                                         &kp Y                 &kp U       &kp I      &kp O    &kp P     &kp MINUS
+&kp MINUS  &kp A   &kp S   &kp D   &kp F             &kp G                                                         &kp H                 &kp J       &kp K      &kp L    &kp SEMI  &kp SQT
+&kp EQUAL  &kp Z   &kp X   &kp C   &kp V             &kp B                     &lt 1 BACKSPACE        &kp RBKT     &kp N                 &kp M       &kp COMMA  &kp DOT  &kp FSLH  &kp RSHFT
+                           &tousa  &kp LEFT_CONTROL  &mt LS(LEFT_SHIFT) SPACE  &mt LEFT_ALT RETURN    &lt 1 ENTER  &mt LEFT_SHIFT SPACE  &lt 2 LCMD  &tousa
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -74,7 +74,7 @@
 
             bindings = <
 &trans     &kp F1         &kp F2          &kp F3          &kp F4           &kp F5                            &kp F6           &kp F7           &kp F8          &kp F9           &kp F10            &kp F11
-&kp F1     &kp F2         &mkp RCLK       &mmv MOVE_UP    &mkp LCLK        &msc SCRL_UP                      &kp HOME         &kp END          &kp UP_ARROW    &kp INS          &caps_word         &kp F12
+&kp F1     &kp F2         &mkp RCLK       &mmv MOVE_UP    &mkp LCLK        &msc SCRL_UP                      &kp HOME         &kp END          &kp UP_ARROW    &kp INS          &kp K_MUTE         &kp F12
 &kp GRAVE  &kp EXCL       &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &msc SCRL_DOWN                    &kp PAGE_UP      &kp LEFT_ARROW   &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp LEFT_ALT       &mo 2
 &trans     &kp BACKSLASH  &kp PIPE        &trans          &trans           &trans          &trans    &trans  &kp PAGE_DOWN    &kp PRINTSCREEN  &kp LEFT_WIN    &kp DEL          &kp C_VOLUME_DOWN  &kp C_VOLUME_UP
                                           &trans          &kp LEFT_SHIFT   &trans          &trans    &trans  &kp RIGHT_SHIFT  &trans           &trans

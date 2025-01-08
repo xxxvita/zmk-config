@@ -16,7 +16,7 @@
         td_mt_shift_space: tap_dance_mod_tap {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <150>;
+            tapping-term-ms = <130>;
             bindings = <&mt LSHIFT SPACE>, <&kp SPACE>;
         };
     };

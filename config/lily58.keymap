@@ -129,11 +129,11 @@
             //                     |      |      |      |        |  |       |      |       |       |
 
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                    &kp KP_NUMLOCK  &kp SLASH     &kp ASTRK     &kp MINUS  &bt BT_SEL 3  &pw2
-&trans  &trans  &trans  &trans  &trans  &trans                    &kp N7          &kp N8        &kp N9        &kp PLUS   &kp N0        &pw
-&trans  &trans  &trans  &trans  &trans  &trans                    &kp NUMBER_4    &kp N5        &kp NUMBER_6  &kp ENTER  &kp RIGHT     &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp NUMBER_1    &kp NUMBER_2  &kp NUMBER_3  &kp DEL    &kp RBKT      &kp BSLH
-                        &trans  &trans  &trans  &trans    &kp N0  &trans          &trans        &trans
+&bt BT_CLR  &bt BT_CLR_ALL  &trans  &trans  &trans  &trans                    &kp KP_NUMLOCK  &kp SLASH     &kp ASTRK     &kp MINUS  &bt BT_SEL 3  &pw2
+&trans      &trans          &trans  &trans  &trans  &trans                    &kp N7          &kp N8        &kp N9        &kp PLUS   &kp N0        &pw
+&trans      &trans          &trans  &trans  &trans  &trans                    &kp NUMBER_4    &kp N5        &kp NUMBER_6  &kp ENTER  &kp RIGHT     &trans
+&trans      &trans          &trans  &trans  &trans  &trans  &trans    &trans  &kp NUMBER_1    &kp NUMBER_2  &kp NUMBER_3  &kp DEL    &kp RBKT      &kp BSLH
+                                    &trans  &trans  &trans  &trans    &kp N0  &trans          &trans        &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;

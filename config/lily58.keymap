@@ -19,6 +19,15 @@
             tapping-term-ms = <130>;
             bindings = <&mt LSHIFT SPACE>, <&kp SPACE>;
         };
+
+        td_lang_us_rus: td_lang_us_rus {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TD_LANG_US_RUS";
+            #binding-cells = <0>;
+            bindings = <&tousa>, <&to_rus>;
+
+            tapping-term-ms = <130>;
+        };
     };
 
     macros {
@@ -41,6 +50,8 @@
             #binding-cells = <0>;
             bindings = <&none &kp LS(J) &kp RPAR &kp N &kp DLLR &kp W &kp N2 &kp RPAR &kp L &kp O &kp C &kp K &kp O &kp B &kp A &kp N &kp K &kp C &kp D &kp M &kp R &kp N7 &kp N2 &kp K &kp X &kp N2 &kp N0 &kp N2 &kp N4 &kp N1>;
             label = "PW";
+            wait-ms = <0>;
+            tap-ms = <10>;
         };
 
         pw2: pw2 {
@@ -48,6 +59,14 @@
             #binding-cells = <0>;
             bindings = <&none &kp LS(V) &kp AT &kp G &kp L &kp Y &kp AT &kp M &kp N0 &kp V &kp N1 &kp N2 &kp N3 &kp N4>;
             label = "PW2";
+            tap-ms = <10>;
+        };
+
+        to_rus: to_rus {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(LS(NUMBER_2))>;
+            label = "TO_RUS";
         };
     };
 
@@ -63,11 +82,11 @@
             //                     | ALT  | GUI  | LOWER|  SPACE |  | ENTER | RAISE| BSPC  | GUI   |
 
             bindings = <
-&kp ESC    &kp N1  &kp N2  &kp N3       &kp N4            &kp N5                                                  &kp N6                &kp N7      &kp N8     &kp N9   &kp N0    &kp BACKSPACE
-&kp TAB    &kp Q   &kp W   &kp E        &kp R             &kp T                                                   &kp Y                 &kp U       &kp I      &kp O    &kp P     &kp MINUS
-&kp MINUS  &kp A   &kp S   &kp D        &kp F             &kp G                                                   &kp H                 &kp J       &kp K      &kp L    &kp SEMI  &kp SQT
-&kp EQUAL  &kp Z   &kp X   &kp C        &kp V             &kp B               &lt 1 BACKSPACE        &kp RBKT     &kp N                 &kp M       &kp COMMA  &kp DOT  &kp FSLH  &kp RSHFT
-                           &changelang  &kp LEFT_CONTROL  &td_mt_shift_space  &mt LEFT_ALT RETURN    &lt 1 ENTER  &mt LEFT_SHIFT SPACE  &lt 2 LCMD  &tousa
+&kp ESC    &kp N1  &kp N2  &kp N3       &kp N4            &kp N5                                                  &kp N6                &kp N7      &kp N8           &kp N9   &kp N0    &kp BACKSPACE
+&kp TAB    &kp Q   &kp W   &kp E        &kp R             &kp T                                                   &kp Y                 &kp U       &kp I            &kp O    &kp P     &kp LBKT
+&kp MINUS  &kp A   &kp S   &kp D        &kp F             &kp G                                                   &kp H                 &kp J       &kp K            &kp L    &kp SEMI  &kp SQT
+&kp EQUAL  &kp Z   &kp X   &kp C        &kp V             &kp B               &lt 1 BACKSPACE        &kp RGUI     &kp N                 &kp M       &kp COMMA        &kp DOT  &kp FSLH  &kp RIGHT_BRACKET
+                           &changelang  &kp LEFT_CONTROL  &td_mt_shift_space  &mt LEFT_ALT RETURN    &lt 1 ENTER  &mt LEFT_SHIFT SPACE  &lt 2 LCMD  &td_lang_us_rus
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;

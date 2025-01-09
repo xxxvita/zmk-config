@@ -32,7 +32,7 @@
         mm_shift_space: mm_shift_space {
             compatible = "zmk,behavior-mod-morph";
             label = "MM_SHIFT_SPACE";
-            bindings = <&td_mt_shift_space>, <&kp SPACE>;
+            bindings = <&mt LEFT_SHIFT SPACE>, <&kp SPACE>;
 
             #binding-cells = <0>;
             mods = <(MOD_LCTL)>;

@@ -91,7 +91,13 @@
         macro_e_E: macro_e_E {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp TILDE>, <&macro_press>;
+            wait-ms = <40>;
+            tap-ms = <40>;
+            bindings
+                = <&macro_press   &kp LALT>
+                , <&macro_tap     &kp KP_N0 &kp KP_N1 &kp KP_N6 &kp KP_N3>
+                , <&macro_release &kp LALT>
+                ;
 
             label = "MACRO_E_E";
         };

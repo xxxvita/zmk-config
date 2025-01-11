@@ -137,6 +137,16 @@
             bindings = <&kp ESCAPE>;
             key-positions = <28 12>;
         };
+
+        combo_j_bracket_sq {
+            bindings = <&kp BACKSPACE>;
+            key-positions = <31 23>;
+        };
+
+        combo_f_ret_backspace {
+            bindings = <&kp BACKSPACE>;
+            key-positions = <28 53>;
+        };
     };
 
     keymap {

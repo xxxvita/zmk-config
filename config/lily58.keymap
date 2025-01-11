@@ -89,6 +89,20 @@
         };
     };
 
+    combos {
+        compatible = "zmk,combos";
+
+        combo_g_t_f5 {
+            bindings = <&kp F5>;
+            key-positions = <29 17>;
+        };
+
+        combo_f_shift_minus {
+            bindings = <&kp MINUS>;
+            key-positions = <28 24>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 

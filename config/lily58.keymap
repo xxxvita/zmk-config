@@ -101,6 +101,21 @@
             bindings = <&kp MINUS>;
             key-positions = <28 24>;
         };
+
+        combo_g_h_repeat {
+            bindings = <&key_repeat>;
+            key-positions = <29 30>;
+        };
+
+        combo_t_y_change_lang {
+            bindings = <&changelang>;
+            key-positions = <17 18>;
+        };
+
+        combo_f_j_tousa {
+            bindings = <&tousa>;
+            key-positions = <28 31>;
+        };
     };
 
     keymap {

@@ -87,6 +87,14 @@
             bindings = <&kp LC(LS(NUMBER_2))>;
             label = "TO_RUS";
         };
+
+        macro_e_E: macro_e_E {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp TILDE>, <&macro_press>;
+
+            label = "MACRO_E_E";
+        };
     };
 
     combos {

@@ -103,6 +103,20 @@
 
             label = "MACRO_E_E";
         };
+
+        macro_bracket1: macro_bracket1 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_PARENTHESIS &kp RIGHT_PARENTHESIS &kp LEFT>;
+            label = "MACRO_BRACKET1";
+        };
+
+        macro_bracket2: macro_bracket2 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_BRACKET &kp RIGHT_BRACKET &kp LEFT>;
+            label = "MACRO_BRACKET2";
+        };
     };
 
     combos {
@@ -138,11 +152,6 @@
             key-positions = <28 12>;
         };
 
-        combo_j_bracket_sq {
-            bindings = <&kp BACKSPACE>;
-            key-positions = <31 23>;
-        };
-
         combo_f_g_minus {
             bindings = <&kp MINUS>;
             key-positions = <28 27>;
@@ -156,6 +165,16 @@
         combo_s_d_backspace {
             bindings = <&kp BACKSPACE>;
             key-positions = <27 26>;
+        };
+
+        combo_f_9_bracket1 {
+            bindings = <&macro_bracket1>;
+            key-positions = <31 9>;
+        };
+
+        combo_f_brl_bracket2 {
+            bindings = <&macro_bracket2>;
+            key-positions = <31 23>;
         };
     };
 
@@ -209,11 +228,11 @@
             //                     |      |      |      |        |  |       |      |       |       |
 
             bindings = <
-&bt BT_CLR    &bt BT_CLR_ALL  &trans  &trans  &trans  &trans                           &kp KP_NUMLOCK  &kp SLASH     &kp ASTRK     &kp MINUS  &bt BT_SEL 3  &pw2
-&kp K_MUTE2   &trans          &trans  &trans  &trans  &trans                           &kp N7          &kp N8        &kp N9        &kp PLUS   &kp N0        &pw
-&trans        &trans          &trans  &trans  &trans  &trans                           &kp NUMBER_4    &kp N5        &kp NUMBER_6  &kp ENTER  &kp RIGHT     &to 0
-&out OUT_BLE  &out OUT_USB    &trans  &trans  &trans  &trans  &trans    &kp BACKSPACE  &kp NUMBER_1    &kp NUMBER_2  &kp NUMBER_3  &kp DEL    &kp RBKT      &kp BSLH
-                                      &trans  &trans  &trans  &trans    &kp N0         &trans          &trans        &trans
+&bt BT_CLR    &bt BT_CLR_ALL  &trans  &trans  &trans  &kp K_MUTE                           &kp KP_NUMLOCK  &kp SLASH     &kp ASTRK     &kp MINUS  &bt BT_SEL 3  &pw2
+&kp CLCK      &trans          &trans  &trans  &trans  &trans                               &kp N7          &kp N8        &kp N9        &kp PLUS   &kp N0        &pw
+&trans        &trans          &trans  &trans  &trans  &trans                               &kp NUMBER_4    &kp N5        &kp NUMBER_6  &kp ENTER  &kp RIGHT     &to 0
+&out OUT_BLE  &out OUT_USB    &trans  &trans  &trans  &trans      &trans    &kp BACKSPACE  &kp NUMBER_1    &kp NUMBER_2  &kp NUMBER_3  &kp DEL    &kp RBKT      &kp BSLH
+                                      &trans  &trans  &trans      &trans    &kp N0         &trans          &trans        &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;

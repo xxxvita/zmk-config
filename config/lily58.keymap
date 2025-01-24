@@ -169,12 +169,27 @@
 
         combo_f_9_bracket1 {
             bindings = <&macro_bracket1>;
-            key-positions = <31 9>;
+            key-positions = <31 20>;
         };
 
         combo_f_brl_bracket2 {
             bindings = <&macro_bracket2>;
-            key-positions = <31 23>;
+            key-positions = <31 32>;
+        };
+
+        combo_f_e_esc {
+            bindings = <&kp ESCAPE>;
+            key-positions = <28 15>;
+        };
+
+        combo_j_l_del {
+            bindings = <&kp DEL>;
+            key-positions = <31 33>;
+        };
+
+        combo_j_h_backspace {
+            bindings = <&kp BACKSPACE>;
+            key-positions = <31 30>;
         };
     };
 

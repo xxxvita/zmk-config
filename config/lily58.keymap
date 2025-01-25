@@ -117,6 +117,41 @@
             bindings = <&kp LEFT_BRACKET &kp RIGHT_BRACKET &kp LEFT>;
             label = "MACRO_BRACKET2";
         };
+
+        macro_select: macro_select {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LS(S) &kp LS(E) &kp LS(L) &kp LS(E) &kp LS(C) &kp LS(T) &kp SPACE &kp N1>;
+            label = "MACRO_SELECT";
+        };
+
+        macro_from: macro_from {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LS(F) &kp LS(R) &kp LS(O) &kp LS(M) &kp SPACE &kp D &kp B &kp O &kp DOT>;
+            label = "MACRO_FROM";
+        };
+
+        macro_outer_apply: macro_outer_apply {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LS(O) &kp LS(U) &kp LS(T) &kp LS(E) &kp LS(R) &kp SPACE &kp LS(A) &kp LS(P) &kp LS(P) &kp LS(L) &kp LS(Y) &kp RET &kp LPAR &kp RET &kp SPACE &kp SPACE &kp SPACE &kp SPACE &kp RET &kp RPAR &kp LS(S) &kp LS(E) &kp LS(L) &kp LS(E) &kp LS(C) &kp LS(T) &kp SPACE &kp N1 &kp RET &kp LS(F) &kp LS(R) &kp LS(O) &kp LS(M) &kp SPACE &kp D &kp B &kp O &kp DOT>;
+            label = "MACRO_OUTER_APPLY";
+        };
+
+        macro_cross_apply: macro_cross_apply {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LS(C) &kp LS(R) &kp LS(O) &kp LS(S) &kp LS(S) &kp SPACE &kp LS(A) &kp LS(P) &kp LS(P) &kp LS(L) &kp LS(Y) &kp RET &kp LPAR &kp RET &kp SPACE &kp SPACE &kp SPACE &kp SPACE &kp LS(S) &kp LS(E) &kp LS(L) &kp LS(E) &kp LS(C) &kp LS(T) &kp SPACE &kp N1 &kp RET &kp SPACE &kp SPACE &kp SPACE &kp SPACE &kp LS(F) &kp LS(R) &kp LS(O) &kp LS(M) &kp SPACE &kp RET &kp RPAR>;
+            label = "MACRO_CROSS_APPLY";
+        };
+
+        macro_ibs: macro_ibs {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LS(J) &kp RPAR &kp N &kp DLLR &kp W &kp N2 &kp RPAR &kp N9 &kp N3 &kp N1 &kp N0 &kp N0 &kp N0>;
+            label = "MACRO_IBS";
+        };
     };
 
     combos {
@@ -149,7 +184,7 @@
 
         combo_f_tab_esc {
             bindings = <&kp ESCAPE>;
-            key-positions = <28 12>;
+            key-positions = <28 15>;
         };
 
         combo_f_g_minus {
@@ -177,11 +212,6 @@
             key-positions = <31 32>;
         };
 
-        combo_f_e_esc {
-            bindings = <&kp ESCAPE>;
-            key-positions = <28 15>;
-        };
-
         combo_j_l_del {
             bindings = <&kp DEL>;
             key-positions = <31 33>;
@@ -190,6 +220,24 @@
         combo_j_h_backspace {
             bindings = <&kp BACKSPACE>;
             key-positions = <31 30>;
+        };
+
+        combo_s_e {
+            bindings = <&macro_select>;
+            key-positions = <26 15>;
+            layers = <1>;
+        };
+
+        combo_o_a {
+            bindings = <&macro_outer_apply>;
+            key-positions = <21 25>;
+            layers = <1>;
+        };
+
+        combo_c_a {
+            bindings = <&macro_cross_apply>;
+            key-positions = <25 38>;
+            layers = <1>;
         };
     };
 
@@ -225,8 +273,8 @@
 
             bindings = <
 &kp GRAVE  &kp F1         &kp F2          &kp F3          &kp F4           &kp F5                            &kp F6           &kp F7           &kp F8          &kp F9           &kp F10            &kp F11
-&kp GRAVE  &kp F2         &mkp RCLK       &mmv MOVE_UP    &mkp LCLK        &msc SCRL_UP                      &kp HOME         &kp END          &kp UP_ARROW    &kp INS          &kp K_MUTE         &kp F12
-&trans     &kp EXCL       &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &msc SCRL_DOWN                    &kp PAGE_UP      &kp LEFT_ARROW   &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp LEFT_ALT       &to 2
+&kp GRAVE  &none          &mkp RCLK       &mmv MOVE_UP    &mkp LCLK        &msc SCRL_UP                      &kp HOME         &kp END          &kp UP_ARROW    &kp INS          &kp K_MUTE         &kp F12
+&trans     &none          &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &msc SCRL_DOWN                    &kp PAGE_UP      &kp LEFT_ARROW   &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp LEFT_ALT       &to 2
 &trans     &kp BACKSLASH  &kp PIPE        &trans          &trans           &trans          &trans    &trans  &kp PAGE_DOWN    &kp PRINTSCREEN  &kp LEFT_WIN    &kp DEL          &kp C_VOLUME_DOWN  &kp C_VOLUME_UP
                                           &trans          &kp LCTRL        &trans          &trans    &trans  &kp RIGHT_SHIFT  &trans           &trans
             >;
@@ -243,10 +291,10 @@
             //                     |      |      |      |        |  |       |      |       |       |
 
             bindings = <
-&bt BT_CLR    &bt BT_CLR_ALL  &trans  &trans  &trans  &kp K_MUTE                           &kp KP_NUMLOCK  &kp SLASH     &kp ASTRK     &kp MINUS  &bt BT_SEL 3  &pw2
-&kp CLCK      &trans          &trans  &trans  &trans  &trans                               &kp N7          &kp N8        &kp N9        &kp PLUS   &kp N0        &pw
-&trans        &trans          &trans  &trans  &trans  &trans                               &kp NUMBER_4    &kp N5        &kp NUMBER_6  &kp ENTER  &kp RIGHT     &to 0
-&out OUT_BLE  &out OUT_USB    &trans  &trans  &trans  &trans      &trans    &kp BACKSPACE  &kp NUMBER_1    &kp NUMBER_2  &kp NUMBER_3  &kp DEL    &kp RBKT      &kp BSLH
+&bt BT_CLR    &bt BT_CLR_ALL  &trans  &trans  &trans  &kp K_MUTE                           &kp KP_NUMLOCK  &kp SLASH     &kp ASTRK     &kp MINUS  &macro_ibs  &pw2
+&kp CLCK      &trans          &trans  &trans  &trans  &trans                               &kp N7          &kp N8        &kp N9        &kp PLUS   &none       &pw
+&trans        &trans          &trans  &trans  &trans  &trans                               &kp NUMBER_4    &kp N5        &kp NUMBER_6  &kp ENTER  &none       &to 0
+&out OUT_BLE  &out OUT_USB    &trans  &trans  &trans  &trans      &trans    &kp BACKSPACE  &kp NUMBER_1    &kp NUMBER_2  &kp NUMBER_3  &kp DEL    &none       &kp BSLH
                                       &trans  &trans  &trans      &trans    &kp N0         &trans          &trans        &trans
             >;
 
